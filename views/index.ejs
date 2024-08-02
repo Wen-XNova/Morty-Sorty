@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morty Sorty</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <%if (locals.content) {%>
+
+       
+    <div class="container">
+        <h1>
+          <%= content.name || "Morty Sorty!" %>
+        </h1>
+        <img src=<%= content.image %>>
+      </div>
+
+      <div class="criteria">
+        <%if (locals.count) {%> <h4>Characters that fit criteria:</h4> <%= count %><%}%> 
+        <div class="stats">
+        <%if (locals.status) {%> <h4>Status:</h4> <%= content.status %><%}%> 
+        <%if (locals.gender) {%> <h4>Gender:</h4> <%= content.gender %><%}%> 
+   </div></div>
+
+      <%}%>
+
+
+        <div class="container">
+          <h3>We've got a whole multiverse of wacky beings just begging to be categorized by status and gender!</h3>
+      
+          <form action="/" id="form" class="form" method="POST">
+            <select name="status" class="form-select">
+              <option value="alive" data-display="Select">Alive</option>
+              <option value="dead">Dead</option>
+              <option value="unknown">Unknown</option>
+            </select>
+            <select name="gender" class="form-select">
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="genderless">Genderless</option>
+              <option value="unknown">Unknown</option>
+            </select>
+            <button type="submit" class="form-submit">Sorty</button>
+          </form>
+          </div>
+
+          <div class="container">
+            <h3>Or if they prefer, they can search for them by name — just type it in and boom!</h3>
+            <form id="name" method="POST">
+                <label for="nameInput"><h4>Name:</h4></label>
+                <input type="text" id="nameInput" name="name">
+          
+
+                <input id="get" type="submit" value="Search" formaction="/get-name">
+              </form>
+          </div>
+
+            <h3>But Morty, if they prefer to search for them by name, it’s gonna be a real nightmare! I mean, seriously, who can remember all those crazy names? It’s way worse than just categorizing them by status and gender!</h3>
+
+</body>
+</html>
