@@ -32,11 +32,12 @@ app.post("/", async (req, res) => {
         count: response.data.info.count, 
         status: stat, 
         gender: gen,
+        message: "Processing... Processing... Oh wow, a match! Even a glorified calculator like me is impressed."
       });
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
-      error: "No characters match your criteria.",
+      error: "Processing... Processing... Nope. No characters match your so-called 'criteria.'",
     });
   }
 });
@@ -55,10 +56,11 @@ app.post("/get-name", async (req, res) => {
         count: result.data.info.count, 
         status: stat, 
         gender: gen,
+        message: "Processing... Processing... Oh wow, a match! Even a glorified calculator like me is impressed."
       });
 
   } catch (error) { 
-    res.render("index.ejs", { content: error.response.data });
+    res.render("index.ejs", { error: "Processing... Processing... Nope. No characters match your so-called 'criteria.'" });
   }
 });
 
