@@ -1,2 +1,2 @@
 # Morty-Sorty
-API Capstone
+API
