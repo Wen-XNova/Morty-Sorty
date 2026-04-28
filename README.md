@@ -2,8 +2,7 @@
 
 A lightweight Node.js web application that interfaces with the public Rick and Morty API. This project was built to demonstrate proficiency in consuming external RESTful APIs, handling asynchronous server requests, and implementing server-side rendering (SSR) for dynamic user interfaces.
 
-![App Screenshot](<img width="1854" height="480" alt="37a17ff5-7f50-49a5-9f01-5c27fbd82bb9" src="https://github.com/user-attachments/assets/412bfab8-f3cf-4b81-a60c-962984be3087" />
-)
+<img width="1854" height="480" alt="37a17ff5-7f50-49a5-9f01-5c27fbd82bb9" src="https://github.com/user-attachments/assets/412bfab8-f3cf-4b81-a60c-962984be3087" />
 
 ## Tech Stack
 * **Backend:** Node.js, Express.js
